@@ -1,0 +1,98 @@
+html,
+body {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image:linear-gradient(rgba(117, 17, 74, 0.5), rgba(117,17, 74, 0.5)), url(./pexels-dominika-roseclay-1036841.jpg);
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  color: #fff;
+}
+
+#form2{
+    display: none;
+}
+
+#sign-in-tab:checked ~ #form2, #sign-up-tab:checked ~ #form1{
+    display: block;
+}
+
+#sign-in-tab:checked ~ #form1, #sign-up-tab:checked ~ #form2{
+    display: none;
+}
+
+.tab:not(:checked) + label{
+    opacity: 0.8;
+}
+
+.login-form{
+    top: 20%;
+    position: absolute;
+    left: 7%;
+    width: 400px;
+}
+
+.tab{
+    display: none;
+}
+
+.tab-header{
+    width:48%;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.tab-header:after{
+    display: block;
+    content: '';
+    height: 20px;
+    border-bottom: 2px solid rgb(173, 56, 120);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.tab:checked + label:after{
+    transform:scaleX(1);
+}
+
+.header{
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form-input input{
+    border-radius: 5px;
+    height: 35px;
+    margin: 10px 0;
+    width: 100%;
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px;
+}
+
+input::placeholder, #check{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus{
+    outline:none;
+}
+
+.submit-button{
+    margin: 20px;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(173, 56, 120);
+    color: #fff;
+    border-width: 0;
+}
